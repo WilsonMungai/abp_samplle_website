@@ -6,7 +6,7 @@
 
 <title>The Flying Dutchman QLD | Equine Reproduction Specialists</title>
 
-<meta name="description" content="The Flying Dutchman QLD provides advanced equine reproduction medicine including OPU, Embryo Transfer and Artificial Insemination in Toowoomba, Queensland." />
+<meta name="description" content="Advanced equine reproduction medicine in Toowoomba, QLD. OPU, Embryo Transfer and Artificial Insemination specialists." />
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -16,7 +16,7 @@
   --blue: #0f3c88;
   --orange: #f58220;
   --dark: #0b1f3a;
-  --light: #f8fafc;
+  --light: #f9fafb;
 }
 
 * {
@@ -27,30 +27,28 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: white;
   color: #1f2937;
+  background: white;
   line-height: 1.7;
 }
 
-/* NAVIGATION */
+/* HEADER / NAV */
 
-nav {
+header {
   position: absolute;
-  top: 0;
   width: 100%;
-  padding: 1.2rem 3rem;
+  top: 0;
+  z-index: 20;
+  padding: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
-  background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(6px);
 }
 
-nav .logo {
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
   color: white;
-  font-weight: 600;
-  font-size: 1rem;
   letter-spacing: 1px;
 }
 
@@ -66,51 +64,59 @@ nav a:hover {
   color: var(--orange);
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
   height: 100vh;
-  background: linear-gradient(
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.55)
-    ),
-    url("hero.jpg") center/cover no-repeat;
+  background: url("images/hero.jpg") center center/cover no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+}
+
+.hero-content {
+  position: relative;
   color: white;
+  max-width: 800px;
 }
 
 .hero-content h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
+  font-weight: 500;
 }
 
-.hero-content .cta-btn {
+.cta-btn {
   background: var(--orange);
   padding: 1rem 2.5rem;
   border-radius: 8px;
   text-decoration: none;
   color: white;
   font-weight: 600;
-  font-size: 1rem;
   transition: 0.3s ease;
 }
 
-.hero-content .cta-btn:hover {
+.cta-btn:hover {
   background: #d96c12;
 }
 
-/* MAIN CONTENT */
+/* MAIN SECTIONS */
 
 section {
   max-width: 1100px;
@@ -120,18 +126,10 @@ section {
 
 section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   margin-bottom: 1.5rem;
-  color: var(--dark);
+  color: var(--blue);
 }
-
-.about p {
-  max-width: 800px;
-  margin-bottom: 1.2rem;
-  font-size: 1.05rem;
-}
-
-/* SERVICES */
 
 .services-grid {
   display: grid;
@@ -141,18 +139,17 @@ section h2 {
 }
 
 .service-card {
+  background: var(--light);
   padding: 2rem;
-  border-radius: 16px;
-  background: #f9fafb;
-  border-top: 4px solid var(--orange);
+  border-radius: 14px;
+  border-left: 5px solid var(--orange);
   font-weight: 600;
-  font-size: 1.05rem;
   transition: 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* CONTACT */
@@ -161,12 +158,7 @@ section h2 {
   background: var(--blue);
   color: white;
   padding: 3rem;
-  border-radius: 20px;
-  margin-top: 2rem;
-}
-
-.contact-box p {
-  margin-bottom: 0.8rem;
+  border-radius: 18px;
 }
 
 .contact-box a {
@@ -178,31 +170,30 @@ section h2 {
 /* FOOTER */
 
 footer {
-  text-align: center;
-  padding: 3rem 1rem;
   background: #0b1f3a;
   color: white;
+  text-align: center;
+  padding: 3rem 1rem;
   margin-top: 5rem;
-  font-size: 0.95rem;
 }
 
 footer p {
-  margin: 0.4rem 0;
+  margin: 0.5rem 0;
 }
 
 /* RESPONSIVE */
 
 @media(max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.6rem;
-  }
-
-  nav {
+  header {
     padding: 1rem 1.5rem;
   }
 
   nav a {
     margin-left: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
   }
 }
 
@@ -211,34 +202,29 @@ footer p {
 
 <body>
 
-<nav>
+<header>
   <div class="logo">The Flying Dutchman QLD</div>
-  <div>
+  <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
-  </div>
-</nav>
+  </nav>
+</header>
 
 <section class="hero">
   <div class="hero-content">
     <h1>Equine Reproduction Excellence</h1>
-    <p>Advanced reproductive medicine tailored to every mare</p>
+    <p>Specialist reproductive medicine tailored to every mare</p>
     <a href="#contact" class="cta-btn">Make an Enquiry</a>
   </div>
 </section>
 
-<section id="about" class="about">
+<section id="about">
   <h2>Your Horse Deserves the Best</h2>
   <p>
-    The Flying Dutchman QLD provides uncompromising expertise in equine
-    reproduction medicine and surgery. Each mare is managed individually,
-    with specialised care tailored to optimise breeding outcomes.
-  </p>
-  <p>
-    Based in Toowoomba, Queensland, we deliver advanced reproductive
-    technologies including OPU, Embryo Transfer and Artificial Insemination
-    with a commitment to precision, care and clinical excellence.
+    The Flying Dutchman QLD delivers uncompromising expertise in equine
+    reproduction medicine and surgery. Each mare is managed individually
+    with precision, care and advanced reproductive technologies.
   </p>
 </section>
 
@@ -268,8 +254,7 @@ footer p {
 <footer>
   <p><strong>The Flying Dutchman QLD</strong></p>
   <p>Equine Reproduction Medicine & Surgery</p>
-  <p>Toowoomba, QLD</p>
-  <p>© 2026 The Flying Dutchman QLD. All rights reserved.</p>
+  <p>© 2026 All rights reserved.</p>
 </footer>
 
 </body>

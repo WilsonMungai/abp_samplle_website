@@ -1,274 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Flying Dutchman QLD</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Flying Dutchman QLD | Equine Reproduction Experts</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="The Flying Dutchman QLD provides specialist equine reproduction services including OPU, Embryo Transfer, Artificial Insemination and Stallion services in Toowoomba, Queensland." />
 
-<style>
+  <style>
+    :root {
+      --primary-blue: #144ea1;
+      --primary-orange: #f58220;
+      --light-bg: #f8fafc;
+      --dark-text: #1f2937;
+    }
 
-/* ============================= */
-/* RESET */
-/* ============================= */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    header {
+      background: var(--primary-blue);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem 4rem 1rem;
+    }
 
-body {
-  font-family: 'Inter', sans-serif;
-  color: #222;
-  line-height: 1.6;
-}
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: var(--primary-orange);
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    header p {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
 
-/* ============================= */
-/* HEADER */
-/* ============================= */
+    nav {
+      background: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+    }
 
-.site-header {
-  width: 100%;
-  background: #ffffff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-}
+    nav a {
+      margin: 0 1.2rem;
+      text-decoration: none;
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+    nav a:hover {
+      color: var(--primary-orange);
+    }
 
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-}
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
 
-.logo {
-  height: 55px;
-}
+    section {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
 
-nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
+    h2 {
+      margin-top: 0;
+      color: var(--primary-blue);
+      font-size: 2rem;
+    }
 
-nav a:hover {
-  color: #f58220;
-}
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
 
-/* ============================= */
-/* HERO SECTION */
-/* ============================= */
+    .service-card {
+      background: var(--light-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      border-left: 5px solid var(--primary-orange);
+    }
 
-.hero {
-  width: 100%;
-  height: 100vh;
-  margin-top: 80px; /* offset fixed header */
-  background: url("hero-image.jpg") center center / cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
 
-.hero-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+    .cta a {
+      background: var(--primary-orange);
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
+    }
 
-.hero-content {
-  color: white;
-  max-width: 800px;
-  padding: 20px;
-}
+    .cta a:hover {
+      opacity: 0.9;
+    }
 
-.hero-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
+    footer {
+      background: var(--primary-blue);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+    }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 35px;
-  opacity: 0.9;
-}
+    footer p {
+      margin: 0.5rem 0;
+    }
 
-/* ============================= */
-/* BUTTON */
-/* ============================= */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
 
-.btn-primary {
-  background: linear-gradient(135deg, #f58220, #ff9a3c);
-  color: white;
-  padding: 14px 34px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(245,130,32,0.3);
-  transition: 0.3s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(245,130,32,0.4);
-}
-
-/* ============================= */
-/* SERVICES SECTION */
-/* ============================= */
-
-section {
-  padding: 100px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-title h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.section-title p {
-  color: #777;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
-
-.service-card {
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-.service-card h3 {
-  margin-bottom: 15px;
-  color: #f58220;
-}
-
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-
-footer {
-  background: #111;
-  color: #ccc;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-
-  nav {
-    display: none; /* simple mobile version */
-  }
-
-}
-
-</style>
+      section {
+        padding: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container header-inner">
-    <img src="logo.png" alt="The Flying Dutchman QLD Logo" class="logo">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <h1>The Flying Dutchman QLD</h1>
+    <p>Equine Reproduction Experts</p>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay">
-    <div class="hero-content">
-      <h1>Equine Reproduction Excellence</h1>
-      <p>Advanced reproductive medicine tailored to every mare</p>
-      <a href="#contact" class="btn-primary">Make an Enquiry</a>
-    </div>
-  </div>
-</section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="section-title">
+  <main>
+
+    <section id="about">
+      <h2>Your horse deserves the best</h2>
+      <p>
+        The Flying Dutchman provides uncompromising service in equine reproduction.
+        Each mare is managed individually with specialised care tailored to their
+        unique reproductive needs.
+      </p>
+      <p>
+        Based in Toowoomba, Queensland, we deliver advanced reproductive medicine
+        and surgical expertise to achieve optimal breeding outcomes.
+      </p>
+    </section>
+
+    <section id="services">
       <h2>Our Services</h2>
-      <p>Comprehensive equine reproductive medicine and surgical expertise</p>
-    </div>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Breeding Management</h3>
-        <p>Complete reproductive planning and monitoring tailored to your mare’s needs.</p>
+      <div class="services-grid">
+        <div class="service-card">OPU (Ovum Pick-Up)</div>
+        <div class="service-card">Embryo Transfer</div>
+        <div class="service-card">Artificial Insemination</div>
+        <div class="service-card">Stallion Services</div>
       </div>
+    </section>
 
-      <div class="service-card">
-        <h3>Artificial Insemination</h3>
-        <p>Advanced AI procedures with fresh, chilled, and frozen semen.</p>
+    <section id="contact">
+      <h2>Enquiries & Bookings</h2>
+      <p>
+        For all enquiries or to discuss your breeding requirements, please contact:
+      </p>
+
+      <p><strong>Tracey</strong><br>
+      +61 (0) 439 241 965</p>
+
+      <p>Email: 
+        <a href="mailto:admin@theflyingdutchmanqld.com">
+          admin@theflyingdutchmanqld.com
+        </a>
+      </p>
+
+      <div class="cta">
+        <a href="mailto:admin@theflyingdutchmanqld.com">
+          Contact Us Today
+        </a>
       </div>
+    </section>
 
-      <div class="service-card">
-        <h3>Reproductive Surgery</h3>
-        <p>Specialized surgical procedures performed with precision and care.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </main>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 The Flying Dutchman QLD | Toowoomba, QLD</p>
-</footer>
+  <footer>
+    <p><strong>The Flying Dutchman QLD</strong></p>
+    <p>Equine Reproduction Medicine & Surgery</p>
+    <p>Toowoomba, Queensland</p>
+    <p>ABN 65131745358</p>
+    <p>© 2026 The Flying Dutchman QLD. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

@@ -6,50 +6,51 @@
 
 <title>The Flying Dutchman QLD | Equine Reproduction Specialists</title>
 
-<meta name="description" content="Advanced equine reproduction medicine in Toowoomba, QLD. OPU, Embryo Transfer and Artificial Insemination specialists." />
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* VARIABLES */
 :root {
   --blue: #0f3c88;
   --orange: #f58220;
   --dark: #0b1f3a;
-  --light: #f9fafb;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   color: #1f2937;
-  background: white;
   line-height: 1.7;
 }
 
-/* HEADER / NAV */
+/* HEADER */
 
 header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
-  z-index: 20;
+  left: 0;
   padding: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   color: white;
-  letter-spacing: 1px;
 }
 
 nav a {
@@ -67,27 +68,32 @@ nav a:hover {
 /* HERO */
 
 .hero {
+  width: 100vw;
   height: 100vh;
-  background: url("images/hero.jpg") center center/cover no-repeat;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
 }
 
-.hero::before {
+.hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  background: rgba(0,0,0,0.55);
 }
 
 .hero-content {
   position: relative;
+  z-index: 2;
   color: white;
   max-width: 800px;
+  padding: 2rem;
 }
 
 .hero-content h1 {
@@ -99,7 +105,6 @@ nav a:hover {
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
-  font-weight: 500;
 }
 
 .cta-btn {
@@ -109,14 +114,13 @@ nav a:hover {
   text-decoration: none;
   color: white;
   font-weight: 600;
-  transition: 0.3s ease;
 }
 
 .cta-btn:hover {
   background: #d96c12;
 }
 
-/* MAIN SECTIONS */
+/* SECTIONS */
 
 section {
   max-width: 1100px;
@@ -126,10 +130,12 @@ section {
 
 section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
   color: var(--blue);
 }
+
+/* SERVICES */
 
 .services-grid {
   display: grid;
@@ -139,17 +145,11 @@ section h2 {
 }
 
 .service-card {
-  background: var(--light);
+  background: #f9fafb;
   padding: 2rem;
   border-radius: 14px;
   border-left: 5px solid var(--orange);
   font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* CONTACT */
@@ -214,7 +214,7 @@ footer p {
 <section class="hero">
   <div class="hero-content">
     <h1>Equine Reproduction Excellence</h1>
-    <p>Specialist reproductive medicine tailored to every mare</p>
+    <p>Advanced reproductive medicine tailored to every mare</p>
     <a href="#contact" class="cta-btn">Make an Enquiry</a>
   </div>
 </section>
@@ -224,7 +224,7 @@ footer p {
   <p>
     The Flying Dutchman QLD delivers uncompromising expertise in equine
     reproduction medicine and surgery. Each mare is managed individually
-    with precision, care and advanced reproductive technologies.
+    with precision and advanced reproductive technologies.
   </p>
 </section>
 
@@ -246,8 +246,7 @@ footer p {
     <p><strong>Tracey</strong></p>
     <p>+61 (0) 439 241 965</p>
     <p>Email: <a href="mailto:admin@theflyingdutchmanqld.com">admin@theflyingdutchmanqld.com</a></p>
-    <p>Toowoomba, Queensland</p>
-    <p>ABN 65131745358</p>
+    <p>Toowoomba, Queensland | ABN 65131745358</p>
   </div>
 </section>
 

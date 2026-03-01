@@ -7,12 +7,12 @@
 
   <meta name="description" content="The Flying Dutchman QLD provides specialist equine reproduction services including OPU, Embryo Transfer, Artificial Insemination and Stallion services in Toowoomba, Queensland." />
 
-  <!-- Elegant Heading Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --primary-blue: #123e7c;
+      --secondary-blue: #1e4f9c;
       --primary-orange: #f58220;
       --light-bg: #f4f6f9;
       --dark-text: #1f2937;
@@ -26,7 +26,7 @@
       line-height: 1.75;
     }
 
-    /* ================= STICKY HEADER ================= */
+    /* ================= HEADER ================= */
 
     header {
       position: sticky;
@@ -53,12 +53,27 @@
       text-decoration: none;
       color: var(--primary-blue);
       font-weight: 600;
-      letter-spacing: 0.5px;
       transition: 0.25s ease;
     }
 
     nav a:hover {
       color: var(--primary-orange);
+    }
+
+    /* ================= HERO IMAGE ================= */
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 3rem auto 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+      display: block;
     }
 
     /* ================= MAIN ================= */
@@ -101,16 +116,31 @@
       text-align: center;
       font-weight: 600;
       border: 1px solid #e6edf5;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
     }
 
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-      border-left: 5px solid var(--primary-orange);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.12);
     }
 
-    /* ================= CTA ================= */
+    /* ================= CONTACT SECTION ================= */
+
+    #contact {
+      background: var(--secondary-blue);
+      color: white;
+      box-shadow: none;
+    }
+
+    #contact h2 {
+      color: white;
+    }
+
+    #contact a {
+      color: white;
+      text-decoration: underline;
+    }
 
     .cta {
       text-align: center;
@@ -118,20 +148,20 @@
     }
 
     .cta a {
-      background: linear-gradient(135deg, #f58220, #ff9a3c);
+      background: var(--primary-orange);
       color: white;
       padding: 1rem 2.4rem;
       border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
       display: inline-block;
-      box-shadow: 0 10px 25px rgba(245,130,32,0.3);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
     }
 
     .cta a:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 35px rgba(245,130,32,0.4);
+      opacity: 0.95;
     }
 
     /* ================= FOOTER ================= */
@@ -166,6 +196,10 @@
         margin-right: 1rem;
       }
 
+      .hero-container {
+        margin-top: 2rem;
+      }
+
       section {
         padding: 2.2rem;
       }
@@ -185,6 +219,11 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
+
+  <!-- HERO IMAGE -->
+  <div class="hero-container">
+    <img src="images/hero.jpg" alt="Equine Reproduction Services">
+  </div>
 
   <main>
 
